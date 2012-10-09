@@ -3,5 +3,6 @@
 # Empty, for now
 
 # Go back to the home directory
-cd
+# cfoket is to blame for this!
+sed -e 's/runme.sh$/runme.sh; cd -' ../.bashrc
 
