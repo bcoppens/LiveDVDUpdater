@@ -10,3 +10,5 @@ sed -i -e 's/runme.sh$/runme.sh; cd -/' ../.bashrc
 cp init_user.sh ..
 cp create_keypair.sh ..
 
+ln -s /home/liveuser/IngenieursProject/workspace /home/liveuser/
+
