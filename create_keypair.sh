@@ -12,4 +12,5 @@ echo 'IdentityFile ~/.ssh/'${USER}_rsa >> ~/.ssh/config
 chmod o-rw ~/.ssh/config
 chmod g-rw ~/.ssh/config
 
-
+# Continue to add the private key to the key chain
+./init_user.sh $USER
