@@ -14,7 +14,8 @@ cp create_keypair.sh ..
 cp clone_repository_as_group.sh ..
 
 # To make it easier: point the default workspace to the checked out version
-if [ ! -e /home/liveuser/workspace ]
+# In case it is a link and exists, don't ln it again
+if [ ! -L /home/liveuser/workspace ]
 then
 	ln -s /home/liveuser/IngenieursProject/workspace /home/liveuser/
 fi
