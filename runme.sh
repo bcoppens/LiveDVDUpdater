@@ -2,9 +2,9 @@
 
 # Empty, for now
 
-# Go back to the home directory
-# cfoket is to blame for this!
-sed -i -e 's/runme.sh$/runme.sh; cd -/' ../.bashrc
+# Patch the path and go back to the home directory
+# cfoket is to blame for this! I know it's dirty, but otherwise we have to make new live dvds
+sed -i -e 's/runme.sh$/runme.sh; export PATH=/usr/lib/android-sdk-linux/platform-tools:\$PATH; cd -/' ../.bashrc
 
 # Give users the ability to easily make and load a new keypair
 cp init_user.sh ..
