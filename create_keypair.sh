@@ -1,5 +1,12 @@
 #!/bin/bash
 set -u
+
+if [ $# -ne 1 ]
+then
+	echo "usage: create_keypair <username>"
+	exit
+fi
+
 USER=$1
 ssh-keygen -C "$USER For the Live DVD" -f ~/.ssh/${USER}_rsa
 echo "Plak dit in je browser!"
