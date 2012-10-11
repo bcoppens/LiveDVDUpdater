@@ -4,11 +4,11 @@
 # when in a differnent directory than the home directory otherwise gives problems. However, the
 # first time this script is executed, it's always run from within the home directory, so things
 # should get patched before there are any problems. However, we should really fix the live dvds.
-sed -i -e 's#cd LiveUpdater#cd ~/LiveUpdater#' ~/.bashrc
+sed -i -e 's#cd LiveDVDUpdater#cd ~/LiveDVDUpdater#' ~/.bashrc
 
 # Patch the path and go back to the home directory
 # cfoket is to blame for this! I know it's dirty, but otherwise we have to make new live dvds
-sed -i -e 's/runme.sh$/runme.sh; export PATH=/usr/lib/android-sdk-linux/platform-tools:\$PATH; cd -/' ~/.bashrc
+sed -i -e 's#runme.sh$#runme.sh; export PATH=/usr/lib/android-sdk-linux/platform-tools:\$PATH; cd -#' ~/.bashrc
 
 # Give users the ability to easily make and load a new keypair
 cp init_user.sh ..
