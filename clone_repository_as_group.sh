@@ -1,6 +1,12 @@
 #!/bin/bash
 set -u
 
+if [ $# -ne 1 ]
+then
+	echo "usage: clone_repository_as_group <group-nr>"
+	exit
+fi
+
 GROUPNR=$1
 git clone git@github.ugent.be:bcoppens/IngenieursProjectGroep${GROUPNR} IngenieursProject
 
