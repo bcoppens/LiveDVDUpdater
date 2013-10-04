@@ -10,10 +10,6 @@ sed -i -e 's#cd LiveDVDUpdater#cd ~/LiveDVDUpdater#' ~/.bashrc
 # cfoket is to blame for this! I know it's dirty, but otherwise we have to make new live dvds
 sed -i -e 's#runme.sh$#runme.sh; export PATH=/usr/lib/android-sdk-linux/platform-tools:\$PATH; cd -#' ~/.bashrc
 
-# Give users the ability to easily make and load a new keypair
-cp init_user.sh ..
-cp create_keypair.sh ..
-
 # A script to check out the group project to a default directory
 cp clone_repository_as_group.sh ..
 
